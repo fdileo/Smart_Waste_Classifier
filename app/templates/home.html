@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="text-center">
+  <h1 class="mb-4">Benvenuto su SmartWaste</h1>
+</div>
+
+<div class="container mt-4">
+  <div class="row align-items-center">
+  
+    
+    <div class="col-md-6 d-flex flex-column justify-content-center">
+      
+      
+      <div class="border rounded p-3 bg-light mb-4">
+        <p class="lead mb-0">
+          Questo progetto utilizza l'intelligenza artificiale per classificare immagini di rifiuti.
+          <br>
+          L’obiettivo è aiutarti a smaltire correttamente ogni tipo di rifiuto.
+        </p>
+      </div>
+      
+    
+      <div>
+        <p class="mb-2">
+          Una corretta raccolta differenziata è fondamentale per:
+        </p>
+        <ul class="pl-4">
+          <li>ridurre l’inquinamento ambientale;</li>
+          <li>favorire il riciclo e il riuso dei materiali;</li>
+          <li>limitare l’uso di risorse naturali;</li>
+          <li>evitare multe e sanzioni nei contesti urbani.</li>
+        </ul>
+      </div>
+      
+    </div>
+    
+  
+    <div class="col-md-6 text-center">
+      <img src="{{ url_for('static', filename='images/waste_italy_map.jpg') }}"
+           alt="Mappa della raccolta differenziata in Italia"
+           class="img-fluid shadow"
+           style="max-width: 100%; height: auto; max-width: 500px;" />
+    </div>
+    
+  </div>
+
+  {% if user.is_authenticated %}
+    <p class="mt-4 font-weight-bold text-center h5">
+        Clicca su <a href ="/app">App </a> per poter utilizzare l'applicazione.
+    </p>
+  {% else %}
+    <p class="mt-4 font-weight-bold text-center h5">
+      Iscriviti per poter usufruire del servizio completo e contribuire a un mondo più pulito!
+    </p>
+  {% endif %}
+  
+</div>
+
+{% endblock %}

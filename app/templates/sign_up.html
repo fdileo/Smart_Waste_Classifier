@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %} Sign up {% endblock %}
+
+{% block body %}
+
+ <div class="container d-flex justify-content-center align-items-center min-vh-100">
+
+    <div class="card shadow-sm p-4" style="max-width: 500px; width: 100%;">
+        <h3 class="card-title text-center mb-4">Registrazione utente</h3>
+
+        <form method="POST">
+            <div class="mb-3">
+                <label for="email" class="form-label">Indirizzo email</label>
+                <input 
+                       type="email" 
+                       class="form-control" 
+                       id="email" 
+                       name="email" 
+                       placeholder="Inserisci email" 
+                       required>
+            </div>
+
+            <div class="mb-3">
+                <label for="name" class="form-label">Nome</label>
+                <input 
+                       type="text" 
+                       class="form-control" 
+                       id="name" 
+                       name="name" 
+                       placeholder="Inserisci nome" 
+                       required>
+            </div>
+
+            <div class="mb-3">
+                <label for="password_insert" class="form-label">Password</label>
+                <input 
+                       type="password" 
+                       class="form-control" 
+                       id="password_insert" 
+                       name="password_insert" 
+                       placeholder="Inserisci password" 
+                       required>
+            </div>
+
+            <div class="mb-4">
+                <label for="password_ver" class="form-label">Conferma password</label>
+                <input 
+                       type="password" 
+                       class="form-control" 
+                       id="password_ver" 
+                       name="password_ver" 
+                       placeholder="Reinserisci password" 
+                       required>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">Registrati</button>
+            </form>
+    </div>
+
+</div>
+
+{% endblock %}
