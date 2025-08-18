@@ -1,4 +1,6 @@
 {% extends "base.html" %}
+<!-- Questo template eredita da base.html -->
+
 
 {% block title %} Login {% endblock %}
 
@@ -6,10 +8,14 @@
 
 <div class="container d-flex justify-content-center align-items-center min-vh-100">
 
+    <!-- Div che contiene il form di login -->
     <div class="card shadow-sm p-4" style="max-width: 500px; width: 100%;">
         <h3 class="card-title text-center mb-4">Login</h3>
 
+        <!-- Form di login -->
         <form method="POST">
+
+            <!-- Campo email -->
             <div class="mb-3">
                 <label for="email" class="form-label">Indirizzo email</label>
                 <input 
@@ -21,6 +27,7 @@
                        required>
             </div>
             
+            <!-- Campo password -->
             <div class="mb-3">
                 <label for="password" class="form-label">Password</label>
                 <input
@@ -32,6 +39,7 @@
                        required>
             </div>
 
+            <!-- Pulsante di invio -->
             <button type="submit" class="btn btn-primary w-100">Accedi</button>
         </form>
     </div>

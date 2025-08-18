@@ -1,4 +1,6 @@
 {% extends "base.html" %}
+<!-- Questo template eredita da base.html -->
+
 
 {% block title %} Sign up {% endblock %}
 
@@ -6,9 +8,11 @@
 
  <div class="container d-flex justify-content-center align-items-center min-vh-100">
 
+    <!-- Div che contiene il form di registrazione -->
     <div class="card shadow-sm p-4" style="max-width: 500px; width: 100%;">
         <h3 class="card-title text-center mb-4">Registrazione utente</h3>
 
+        <!-- Campo per l'email -->
         <form method="POST">
             <div class="mb-3">
                 <label for="email" class="form-label">Indirizzo email</label>
@@ -21,6 +25,7 @@
                        required>
             </div>
 
+            <!-- Campo per il nome utente -->
             <div class="mb-3">
                 <label for="name" class="form-label">Nome</label>
                 <input 
@@ -32,6 +37,7 @@
                        required>
             </div>
 
+            <!-- Campo per la password -->
             <div class="mb-3">
                 <label for="password_insert" class="form-label">Password</label>
                 <input 
@@ -43,6 +49,7 @@
                        required>
             </div>
 
+            <!-- Campo per conferma password -->
             <div class="mb-4">
                 <label for="password_ver" class="form-label">Conferma password</label>
                 <input 
@@ -54,6 +61,7 @@
                        required>
             </div>
 
+            <!-- Pulsante di invio -->
             <button type="submit" class="btn btn-primary w-100">Registrati</button>
             </form>
     </div>

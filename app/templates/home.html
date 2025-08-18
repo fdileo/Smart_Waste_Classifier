@@ -1,18 +1,22 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} 
+<!-- Questo template eredita da base.html -->
+
 
 {% block body %}
 
 <div class="text-center">
+   <!-- Titolo principale centrato -->
   <h1 class="mb-4">Benvenuto su SmartWaste</h1>
 </div>
 
 <div class="container mt-4">
+
   <div class="row align-items-center">
   
-    
+    <!-- Colonna di sinistra: descrizione del progetto  -->
     <div class="col-md-6 d-flex flex-column justify-content-center">
       
-      
+      <!-- Riquadro informativo con sfondo chiaro -->
       <div class="border rounded p-3 bg-light mb-4">
         <p class="lead mb-0">
           Questo progetto utilizza l'intelligenza artificiale per classificare immagini di rifiuti.
@@ -21,7 +25,7 @@
         </p>
       </div>
       
-    
+      <!-- Lista dei benefici della raccolta differenziata -->
       <div>
         <p class="mb-2">
           Una corretta raccolta differenziata è fondamentale per:
@@ -36,7 +40,7 @@
       
     </div>
     
-  
+    <!-- Colonna di destra: immagine illustrativa -->
     <div class="col-md-6 text-center">
       <img src="{{ url_for('static', filename='images/waste_italy_map.jpg') }}"
            alt="Mappa della raccolta differenziata in Italia"
@@ -46,11 +50,14 @@
     
   </div>
 
+  <!-- Messaggio finale che cambia a seconda se l’utente è loggato o meno -->
   {% if user.is_authenticated %}
+    <!-- Se l’utente è autenticato: invito a usare l’applicazione -->
     <p class="mt-4 font-weight-bold text-center h5">
         Clicca su <a href ="/app">App </a> per poter utilizzare l'applicazione.
     </p>
   {% else %}
+    <!-- Se l’utente non è loggato: invito a iscriversi -->
     <p class="mt-4 font-weight-bold text-center h5">
       Iscriviti per poter usufruire del servizio completo e contribuire a un mondo più pulito!
     </p>
